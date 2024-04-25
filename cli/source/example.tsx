@@ -2,6 +2,7 @@ import React
     from 'react';
 import { render, Text, type TextProps } from 'ink';
 import {
+    TextInput,
     ThemeProvider,
     defaultTheme,
     extendTheme,
@@ -33,9 +34,12 @@ function CustomLabel() {
 
 function Example() {
     return (
-        <ThemeProvider theme={customTheme}>
-            <CustomLabel />
-        </ThemeProvider>
+        <TextInput
+            placeholder="Enter your name..."
+            onSubmit={name => {
+                // `name` contains user input
+            }}
+        />
     );
 }
 
