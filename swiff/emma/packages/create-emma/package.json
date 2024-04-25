@@ -1,0 +1,83 @@
+{
+  "name": "create-emma",
+  "description": "All boilerplates you could dream of.",
+  "author": "Matic Zavadlal <matic.zavadlal@gmail.com>",
+  "version": "0.3.1",
+  "bin": {
+    "create-emma": "dist/bin.js",
+    "create-ema": "dist/bin.js"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "ts-node --files src/bin.tsx",
+    "pack": "pkg dist/bin.js -c package.json -o packed"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/maticzav/emma-cli",
+  "keywords": [
+    "emma",
+    "yarn",
+    "npm"
+  ],
+  "bugs": {
+    "url": "https://github.com/maticzav/emma-cli/issues"
+  },
+  "dependencies": {
+    "algoliasearch": "^3.32.1",
+    "chalk": "^3.0.0",
+    "cli-truncate": "^2.1.0",
+    "creato": "^1.1.0",
+    "execa": "^3.4.0",
+    "ink": "^2.6.0",
+    "ink-spinner": "^3.0.0",
+    "meow": "^5.0.0",
+    "multilines": "^1.0.2",
+    "node-fetch": "^2.6.0",
+    "open": "^7.0.0",
+    "ora": "^4.0.3",
+    "prompts": "^2.3.0",
+    "react": "^16.12.0",
+    "string-width": "^4.2.0",
+    "update-notifier": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/algoliasearch": "3.34.7",
+    "@types/execa": "2.0.0",
+    "@types/ink": "2.0.3",
+    "@types/ink-testing-library": "1.0.1",
+    "@types/jest": "24.0.23",
+    "@types/meow": "5.0.0",
+    "@types/node-fetch": "^2.5.4",
+    "@types/ora": "^3.2.0",
+    "@types/prompts": "^2.0.3",
+    "@types/react": "16.9.15",
+    "@types/update-notifier": "2.5.0",
+    "@zeit/ncc": "0.20.5",
+    "ink-testing-library": "1.0.2",
+    "pkg": "4.4.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maticzav/emma-cli.git"
+  },
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "targets": [
+      "node10-alpine-x64",
+      "node10-linux-x64",
+      "node10-macos-x64",
+      "node10-win-x64"
+    ]
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/emma-cli",
+    "logo": "https://opencollective.com/emma-cli/logo.txt"
+  }
+}

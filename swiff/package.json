@@ -1,0 +1,87 @@
+{
+    "name": "swiff",
+    "version": "1.5.10",
+    "description": "Swiff saves you time with common SSH tasks during the development of websites/apps",
+    "main": "index.js",
+    "scripts": {
+        "start": "node dist/index.js",
+        "dev": "nodemon -q --no-stdin --ignore dist --exec babel-node --ignore swiff.config.js src",
+        "format": "prettier --write --ignore-path .gitignore {src,.}/*.js",
+        "build": "babel src --out-dir dist",
+        "prepublish": "babel src --out-dir dist",
+        "test": "ava"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/burgerbuds/swiff.git"
+    },
+    "keywords": [
+        "developer-tools",
+        "development-environment",
+        "web-tools",
+        "command-line-tool",
+        "command-line-app",
+        "staging-tool"
+    ],
+    "bugs": {
+        "url": "https://github.com/burgerbuds/swiff/issues"
+    },
+    "homepage": "https://github.com/burgerbuds/swiff#readme",
+    "prettier": {
+        "trailingComma": "es5",
+        "useTabs": false,
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true
+    },
+    "author": "",
+    "license": "ISC",
+    "bin": {
+        "swiff": "dist/index.js"
+    },
+    "dependencies": {
+        "chalk": "^2.4.2",
+        "dotenv": "^8.0.0",
+        "fs-extra": "^8.1.0",
+        "import-jsx": "^2.0.0",
+        "ink": "~2.3.0",
+        "ink-select-input": "^3.1.1",
+        "ink-spinner": "^3.0.1",
+        "lodash": "^4.17.14",
+        "meow": "^5.0.0",
+        "node-cmd": "^3.0.0",
+        "node-ssh": "^6.0.0",
+        "promise-mysql": "^4.0.4",
+        "react": "^16.8.6",
+        "ssh2": "^0.8.5",
+        "universal-analytics": "^0.4.20",
+        "update-notifier": "^3.0.1",
+        "username": "^5.1.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.5.0",
+        "@babel/core": "^7.5.4",
+        "@babel/node": "^7.5.0",
+        "@babel/plugin-proposal-class-properties": "^7.5.0",
+        "@babel/preset-env": "^7.5.4",
+        "ava": "^2.2.0",
+        "babel-plugin-transform-react-jsx": "^6.24.1",
+        "eslint": "^6.0.1",
+        "eslint-plugin-react": "^7.14.2",
+        "prettier": "^1.18.2"
+    },
+    "xo": {
+        "extends": [
+            "xo-react"
+        ],
+        "rules": {
+            "react/no-unused-prop-types": 1,
+            "indent": "off",
+            "no-unused-vars": "off",
+            "semi": "off",
+            "arrow-parens": "off",
+            "curly": "off",
+            "comma-dangle": "off"
+        }
+    }
+}

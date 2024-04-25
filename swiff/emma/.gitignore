@@ -1,0 +1,15 @@
+# dependencies
+node_modules
+coverage
+
+# production
+dist
+packed-*
+
+# misc
+.DS_Store
+*.tsbuildinfo
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
