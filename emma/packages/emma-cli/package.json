@@ -11,7 +11,8 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "dev": "ts-node --files src/bin.tsx",
+    "dev": "bun --hot src/bin.tsx",
+    "dev:ts": "ts-node --files src/bin.tsx",
     "prepack": "npm run build",
     "pack": "pkg dist/bin.js -c package.json -o packed"
   },

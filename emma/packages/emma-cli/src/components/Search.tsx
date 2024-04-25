@@ -76,7 +76,7 @@ class Search extends React.Component<WithStdin<Props>> {
       <Box flexDirection="row">
         <Box marginRight={1}>
           <Text>
-            Search packages on <Color cyan>Yarn</Color>:
+            Type you command <Color cyan>Yarn</Color>:
           </Text>
         </Box>
         <Box>

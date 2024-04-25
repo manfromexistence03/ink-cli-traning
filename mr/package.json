@@ -29,7 +29,6 @@
     "prepublish": "npm run build",
     "pretest": "npm run build",
     "test": "ava",
-    "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
   "files": [
